@@ -6,7 +6,7 @@
 #   ./reproduce.sh
 #
 # What this does:
-#   Verifies your corpus file matches the reference hash, runs four statistical
+#   Verifies your corpus file matches the reference hash, runs five statistical
 #   modules against the ZL3b-n.txt Voynich EVA corpus, and writes
 #   REPRODUCTION_REPORT.md summarizing which claims pass and which fail.
 #
@@ -34,7 +34,7 @@ echo "============================================================"
 echo ""
 
 # -- Step 0: Verify corpus --
-echo "[0/5] Verifying corpus..."
+echo "[0/6] Verifying corpus..."
 if [ ! -f "$CORPUS" ]; then
     echo "ERROR: Corpus not found at $CORPUS"
     echo ""
@@ -68,36 +68,41 @@ fi
 echo ""
 
 # -- Step 1: Cipher --
-echo "[1/5] Cipher parameter (R=14) — crib convergence test..."
+echo "[1/6] Cipher parameter (R=14) — crib convergence test..."
 echo "      (9 class-marker cribs × 17 rotations; completes in seconds)"
 $PYTHON scripts/1_cipher.py
 echo ""
 
 # -- Step 2: Syllabary --
-echo "[2/5] Syllabary map v0.4 anchor verification..."
+echo "[2/6] Syllabary map v0.4 anchor verification..."
 $PYTHON scripts/2_syllabary.py
 echo ""
 
 # -- Step 3: Vocabulary --
-echo "[3/5] Confirmed vocabulary token counts and section distributions..."
+echo "[3/6] Confirmed vocabulary token counts and section distributions..."
 $PYTHON scripts/3_vocabulary.py
 echo ""
 
 # -- Step 4: Botanical (if data available) --
 if [ -f "data/botanical_dataset.json" ]; then
-    echo "[4/5] Botanical dataset analysis (113 plants, CTH/CH/QO)..."
+    echo "[4/6] Botanical dataset analysis (113 plants, CTH/CH/QO)..."
     $PYTHON scripts/4_botanical.py
     echo ""
 else
-    echo "[4/5] Botanical dataset (scripts/4_botanical.py) — SKIPPED"
+    echo "[4/6] Botanical dataset (scripts/4_botanical.py) — SKIPPED"
     echo "      data/botanical_dataset.json not present."
     echo "      This module requires the 113-plant dataset from the full paper."
     echo ""
 fi
 
 # -- Step 5: Gradient --
-echo "[5/5] GL4313 pharmacological gradient (Spearman correlation)..."
+echo "[5/6] GL4313 pharmacological gradient (Spearman correlation)..."
 $PYTHON scripts/5_gradient.py
+echo ""
+
+# -- Step 6: Grammar Laws --
+echo "[6/6] Grammar law verification (GL13/GL32/GL54/GL57/GL85 positional statistics)..."
+$PYTHON scripts/6_grammar_laws.py
 echo ""
 
 # -- Final report --

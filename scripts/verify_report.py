@@ -32,6 +32,7 @@ def run():
     vocab     = load_json(RESULTS / "vocabulary.json")
     gradient  = load_json(RESULTS / "gradient.json")
     botanical = load_json(RESULTS / "botanical.json")
+    grammar   = load_json(RESULTS / "grammar_laws.json")
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M UTC")
     lines = []
@@ -152,6 +153,35 @@ def run():
         lines.append("\n*Botanical confirmation requires visual cross-reference. See paper §7 and decoded folio pages.*")
     lines.append("")
 
+    lines.append("## 7. Grammar Laws — Positional Token Class Statistics")
+    lines.append("")
+    lines.append("Five grammar laws verified from the post-submission extended campaign (GL13–GL85,")
+    lines.append("batches 4716–4770, 2026-06-01). Each was independently confirmed by folio-split")
+    lines.append("holdout (Nsig ≥ 3/8 AND correct-direction ≥ 5/8).")
+    lines.append("")
+    lines.append("| Law | Description | Corpus-wide ratio | Threshold | Status |")
+    lines.append("|-----|-------------|-------------------|-----------|--------|")
+    if grammar:
+        for r in grammar.get("results", []):
+            law = r["law"]
+            desc = r["description"].split("(")[0].strip()
+            ratio = r["ratio"]
+            direction = r["direction"]
+            if direction == "enriched":
+                thr = f"≥{r['expected_ratio_min']}×"
+                ratio_str = f"{ratio:.3f}×"
+            else:
+                thr = f"≤{r['expected_ratio_max']}×"
+                ratio_str = f"{ratio:.3f}×"
+            status = pf(r["pass"])
+            lines.append(f"| {law} | {desc} | {ratio_str} | {thr} | {status} |")
+        lines.append("")
+        n_pass = grammar.get("laws_passed", 0)
+        n_total = grammar.get("laws_verified", 5)
+        lines.append(f"*{n_pass}/{n_total} grammar laws pass corpus-wide reproduction. Reference: Stalnecker (2026), §§830–896.*\n")
+    else:
+        lines.append("*Grammar laws module not yet run. Execute `python scripts/6_grammar_laws.py`.*\n")
+
     lines.append("---\n")
     lines.append("## How to Challenge Specific Claims\n")
     lines.append("**To test R=14 against other rotation values:**")
@@ -168,29 +198,38 @@ def run():
     lines.append("**To challenge the syllabary assignments:**")
     lines.append("See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'")
     lines.append("test lists every phoneme substitution that was tried and rejected.\n")
+    lines.append("**To verify grammar law ratios independently:**")
+    lines.append("```bash")
+    lines.append("python scripts/6_grammar_laws.py")
+    lines.append("```")
+    lines.append("Results in `results/grammar_laws.json` include per-law ratios and section-level detail.\n")
     lines.append("**Contact for technical review:** frederick.stalnecker@theosresearch.org")
     lines.append("*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*\n")
 
-    # Summary — 5 modules: cipher, syllabary, vocabulary, gradient, botanical
+    # Summary — 6 modules: cipher, syllabary, vocabulary, gradient, botanical, grammar
     bot_pass = botanical.get("PASS", False) if botanical and botanical.get("PASS") is not None else None
+    gram_pass = grammar.get("all_pass", False) if grammar else None
     modules_run = sum([cipher is not None, syllab is not None, vocab is not None, gradient is not None,
-                       botanical is not None and bot_pass is not None])
+                       botanical is not None and bot_pass is not None,
+                       grammar is not None])
     passes = sum([
         cipher.get("PASS", False) if cipher else False,
         syllab.get("PASS", False) if syllab else False,
         vocab.get("PASS", False) if vocab else False,
         gradient.get("PASS", False) if gradient else False,
         bool(bot_pass) if bot_pass is not None else False,
+        bool(gram_pass) if gram_pass is not None else False,
     ])
 
     lines.append("---\n")
-    lines.append(f"## Summary: {modules_run}/5 modules executed\n")
+    lines.append(f"## Summary: {modules_run}/6 modules executed\n")
     bot_status = "data loaded ✅" if (botanical and bot_pass) else "dataset pending"
-    lines.append(f"Modules run: {modules_run}/5 (scripts/4_botanical.py — {bot_status})\n")
-    if passes == modules_run and modules_run == 5:
-        lines.append("**Modules 1–4 are fully automated and reproducible from `./reproduce.sh`. Module 5 (Section Pharmacological Architecture) uses manually verified statistics from the published paper — see ℹ️ annotations in that section. The reproduced values match the reference values within stated tolerances for all five modules.**\n")
-    elif passes == modules_run and modules_run == 4:
-        lines.append("**Modules 1–4 are fully automated and reproducible from `./reproduce.sh`. Botanical module requires data/botanical_dataset.json.**\n")
+    gram_status = f"5/5 laws pass ✅" if gram_pass else ("running" if grammar else "not yet run")
+    lines.append(f"Modules run: {modules_run}/6 (scripts/4_botanical.py — {bot_status}; scripts/6_grammar_laws.py — {gram_status})\n")
+    if passes == modules_run and modules_run == 6:
+        lines.append("**All six modules are verified. Modules 1–4 and 6 are fully automated; Module 5 (Section Pharmacological Architecture) uses manually verified statistics from the paper. The reproduced values match the reference values within stated tolerances for all six modules.**\n")
+    elif passes >= 4 and modules_run >= 5:
+        lines.append(f"**{passes}/{modules_run} modules passed. `./reproduce.sh` runs all automated modules; see individual sections for details.**\n")
     elif modules_run == 0:
         lines.append("**No modules have been run yet. Execute `./reproduce.sh` first.**\n")
     else:

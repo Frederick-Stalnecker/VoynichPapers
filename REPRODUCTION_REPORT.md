@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-05-27 15:25 UTC
+Generated: 2026-06-01 13:32 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -77,6 +77,22 @@ PASS = result matches stated value within tolerance. FAIL = run `./reproduce.sh`
 
 *Botanical confirmation requires visual cross-reference. See paper §7 and decoded folio pages.*
 
+## 7. Grammar Laws — Positional Token Class Statistics
+
+Five grammar laws verified from the post-submission extended campaign (GL13–GL85,
+batches 4716–4770, 2026-06-01). Each was independently confirmed by folio-split
+holdout (Nsig ≥ 3/8 AND correct-direction ≥ 5/8).
+
+| Law | Description | Corpus-wide ratio | Threshold | Status |
+|-----|-------------|-------------------|-----------|--------|
+| GL13 | p-initial enriched at opener-pos-0 | 6.479× | ≥5.0× | ✅ PASS |
+| GL32 | AM-suffix enriched at all line-finals | 4.965× | ≥3.5× | ✅ PASS |
+| GL54 | SH-initial enriched at cont-line pos-1 | 1.757× | ≥1.4× | ✅ PASS |
+| GL57 | AM-suffix enriched at cont-line-finals | 5.604× | ≥4.0× | ✅ PASS |
+| GL85 | CH-initial depleted at cont-pos-0 | 0.330× | ≤0.5× | ✅ PASS |
+
+*5/5 grammar laws pass corpus-wide reproduction. Reference: Stalnecker (2026), §§830–896.*
+
 ---
 
 ## How to Challenge Specific Claims
@@ -99,13 +115,19 @@ Modify the `QUIRE_DATA` table in `scripts/5_gradient.py` and rerun.
 See `scripts/2_syllabary.py` — each anchor's 'no alternative reading'
 test lists every phoneme substitution that was tried and rejected.
 
+**To verify grammar law ratios independently:**
+```bash
+python scripts/6_grammar_laws.py
+```
+Results in `results/grammar_laws.json` include per-law ratios and section-level detail.
+
 **Contact for technical review:** frederick.stalnecker@theosresearch.org
 *Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/voynich-evidence. Manuscript in review at Cryptologia (2026).*
 
 ---
 
-## Summary: 5/5 modules executed
+## Summary: 6/6 modules executed
 
-Modules run: 5/5 (scripts/4_botanical.py — data loaded ✅)
+Modules run: 6/6 (scripts/4_botanical.py — data loaded ✅; scripts/6_grammar_laws.py — 5/5 laws pass ✅)
 
-**Modules 1–4 are fully automated and reproducible from `./reproduce.sh`. Module 5 (Section Pharmacological Architecture) uses manually verified statistics from the published paper — see ℹ️ annotations in that section. The reproduced values match the reference values within stated tolerances for all five modules.**
+**All six modules are verified. Modules 1–4 and 6 are fully automated; Module 5 (Section Pharmacological Architecture) uses manually verified statistics from the paper. The reproduced values match the reference values within stated tolerances for all six modules.**

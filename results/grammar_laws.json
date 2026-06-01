@@ -1,0 +1,71 @@
+{
+  "module": 6,
+  "name": "Grammar Law Verification",
+  "corpus": "ZL3b-n.txt",
+  "n_lines": 4732,
+  "laws_verified": 5,
+  "laws_passed": 5,
+  "all_pass": true,
+  "results": [
+    {
+      "law": "GL13",
+      "description": "p-initial enriched at opener-pos-0 (corpus-wide \u22655\u00d7; \u00a7H/\u00a7Q peaks 24-27\u00d7)",
+      "direction": "enriched",
+      "base_rate": 0.0144,
+      "slot_rate": 0.0931,
+      "ratio": 6.479,
+      "n_pos0": 945,
+      "k_pos0": 88,
+      "expected_ratio_min": 5.0,
+      "pass": true
+    },
+    {
+      "law": "GL32",
+      "description": "AM-suffix enriched at all line-finals",
+      "direction": "enriched",
+      "base_rate": 0.0176,
+      "slot_rate": 0.0875,
+      "ratio": 4.965,
+      "n_finals": 4732,
+      "k_finals": 414,
+      "expected_ratio_min": 3.5,
+      "pass": true
+    },
+    {
+      "law": "GL54",
+      "description": "SH-initial enriched at cont-line pos-1",
+      "direction": "enriched",
+      "base_rate": 0.0871,
+      "slot_rate": 0.1531,
+      "ratio": 1.757,
+      "n_ct_pos1": 3678,
+      "k_ct_pos1": 563,
+      "expected_ratio_min": 1.4,
+      "pass": true
+    },
+    {
+      "law": "GL57",
+      "description": "AM-suffix enriched at cont-line-finals",
+      "direction": "enriched",
+      "base_rate": 0.0176,
+      "slot_rate": 0.0988,
+      "ratio": 5.604,
+      "n_ct_finals": 3787,
+      "k_ct_finals": 374,
+      "expected_ratio_min": 4.0,
+      "pass": true
+    },
+    {
+      "law": "GL85",
+      "description": "CH-initial depleted at cont-pos-0",
+      "direction": "depleted",
+      "base_rate": 0.1639,
+      "slot_rate": 0.0541,
+      "ratio": 0.33,
+      "n_ct_pos0": 3787,
+      "k_ct_pos0": 205,
+      "expected_ratio_max": 0.5,
+      "pass": true
+    }
+  ]
+}
