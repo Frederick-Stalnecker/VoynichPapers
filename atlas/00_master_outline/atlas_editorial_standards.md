@@ -135,4 +135,4 @@ atlas: add [HISTORICAL] section to chapter_01 on Timurid observatory network
 
 ---
 
-*These standards were established by Frederick Davis Stalnecker, THEOS Research Institute, June 2, 2026, in consultation with ChatGPT (OpenAI) and Manus (Manus Team). They are binding on all future contributors.*
+*These standards are a THEOS Research Institute document. Established June 2, 2026. They are binding on all future contributors, human and AI.*
