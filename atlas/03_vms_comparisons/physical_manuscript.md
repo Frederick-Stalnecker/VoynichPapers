@@ -68,6 +68,20 @@ Whatever the manuscript ultimately proves to be, it is not a modern invention.
 
 The parchment is genuine.
 
+### A Note on Radiocarbon Dating and Authorship
+
+Radiocarbon testing provides one of the most important chronological anchors available for the Voynich Manuscript. The results establish that the parchment itself originated during the early fifteenth century.
+
+It is important, however, to understand precisely what radiocarbon dating measures.
+
+The test dates the biological material from which the vellum was produced. In other words, it estimates when the animal supplying the parchment lived, not necessarily the exact date on which the manuscript was written.
+
+In most cases these dates are expected to be reasonably close. Nevertheless, vellum was a valuable and durable writing material. Medieval scriptoria and scholars often maintained stocks of unused parchment, and blank vellum could remain in storage before receiving text or illustrations.
+
+For this reason, radiocarbon results should be interpreted primarily as establishing a chronological boundary for the manuscript's materials rather than an exact timestamp for inscription.
+
+The early fifteenth-century radiocarbon range remains one of the strongest pieces of evidence concerning the manuscript's origin. At the same time, a modest interval between parchment preparation and manuscript production remains historically plausible and should be considered when evaluating chronological arguments.
+
 ### Ink and Execution
 
 Examination of the manuscript reveals a striking characteristic.
