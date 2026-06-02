@@ -85,3 +85,33 @@ If THEOS contributes even a small stone to that foundation, and if the work cont
 What survives us is rarely our name.
 
 It is the knowledge we leave behind and the people we inspire to continue the journey.
+
+---
+
+As we move into the chapters that follow, the reader will begin to encounter the modern investigation itself and the role I played within it.
+
+My contribution was not that of a cryptologist, linguist, or historian. Rather, I served as the human governor of a reasoning system designed to question its own conclusions, challenge its assumptions, and continuously refine its understanding through constructive and adversarial analysis.
+
+What follows is therefore not merely an examination of a manuscript. It is also the story of an experiment in reasoning.
+
+For more than six centuries, the Voynich Manuscript has stood as one of history's most enduring mysteries. Generations of brilliant minds approached it from countless directions, each adding to the foundation upon which future investigators would build. The work presented here exists because of those efforts.
+
+As the evidence unfolds, you will see not only the manuscript itself, but also the process through which its patterns, structures, and relationships emerged from years of analysis. Some findings are historical. Some are comparative. Some are interpretations generated through the THEOS framework. All are presented with the hope that they can be examined, challenged, and evaluated on their own merits.
+
+It is my sincere hope that as you read these pages, you experience something of what I experienced during the investigation itself.
+
+Curiosity.
+
+Wonder.
+
+Doubt.
+
+Discovery.
+
+And perhaps, on occasion, that rare feeling that accompanies every great mystery when a new piece of the puzzle suddenly falls into place.
+
+Whether you ultimately agree with the conclusions presented here is less important than the journey itself. The purpose of this work is not to demand belief, but to invite exploration.
+
+The manuscript has waited more than six hundred years for its next readers.
+
+You are now one of them.
