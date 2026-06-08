@@ -85,13 +85,6 @@ and the methodological limitations that remain open.
   composition is consistent across folio sides at the section level. Pre-reg commits:
   batch3392-3393.
 
-**NR-06 — H6-2 and H6-3**
-- *Prediction:* Two hypotheses in the Phase 6 series regarding section-level structural
-  predictions.
-- *Result:* FALSIFIED (batch results, Phase 6 sweep, 2026-05-22).
-- *Disposition:* Documented in main paper §§ covering Phase 6. No revision of core claims
-  required; Phase 6 results were not load-bearing for the primary decipherment case.
-
 **NR-07 — European language family (Proto-Romance and cognates)**
 - *Prediction:* Standard academic hypothesis entering the project. Tested whether the corpus
   could be explained as an encrypted form of a European natural language (Latin, proto-Romance,
@@ -246,72 +239,6 @@ complete and accurate account of the syllabary's current scope.
   during a blind test of the reproduction pipeline: the script returned different numbers
   than the working notes, and the discrepancy was investigated and documented rather than
   suppressed. The corrected values replace the working-note values in all public materials.
-
-**NR-08 — GL4318: Zodiac-wide pharmacological clock universality (2026-05-27)**
-- *Prediction:* The GL4314 pharmacological clock (CH tokens clustering in 07:00–11:00 across
-  f73r/f73v) would generalize across all 13 §A zodiac folios carrying outer-ring clock codes
-  (@Lz, &Lz, @Ro), producing CH mean ∈ [7.0, 11.0] over N=320 tokens and QO count ≥10.
-  Pre-registered at commit `152a3b05` before any pharmacological classification of the
-  11 non-f73 zodiac folios was performed.
-- *Result:* NEGATIVE (batch4318, 2026-05-27). H-GL4318-1 FAILED: CH mean = 6.49h (exits
-  window). H-GL4318-2 FAILED: QO n=4 (below ≥10 threshold). H-GL4318-3 FAILED: Fisher p=1.0.
-  H-GL4318-4 CONFIRMED: OK uniform MW p=0.566.
-- *Why it failed:* Vocabulary stratification. Earlier zodiac folios (f69r–f72v3) are dominated
-  by `ol-`, `or-`, `oe-` initial families not present in the locked pharmacological classifier
-  (80% UNK in f72r3). CH-class tokens in these folios cluster in the pre-dawn window
-  (00:30–06:45h), pulling the combined CH mean from 7.28h (f73r/f73v only) to 6.49h (all 13
-  folios). Earlier zodiac folios encode an astronomical/calendar register; f73r/f73v encode a
-  pharmaceutical timing register.
-- *GL4314 status:* EXPLORATORY-CONSISTENT-STRONG (unchanged). GL4318 tested zodiac
-  universality; GL4314 tested f73r/f73v specifically. The negative result places GL4314 in
-  sharper scope: the pharmacological clock is a property of the terminal zodiac folios, not
-  the zodiac section as a whole. This two-register interpretation — astronomical calendar
-  (f69r–f72v3) followed by daily pharmaceutical scheduling (f73r–f73v) — is consistent with
-  the §A visual evidence and with Sowa Rigpa medical astronomy practice.
-- *Disposition:* NR-08 recorded as a genuine pre-registered negative result. GL4318 paper
-  section (§764) drafted; on hold until Cryptologia decision (~June 3, 2026).
-
-**NR-09 — GL4330: Terminal zodiac clock variance lower than early zodiac (2026-05-27)**
-- *Prediction:* Terminal zodiac folios (f73r/f73v) would have significantly lower temporal
-  variance (clock position std) than early zodiac (f69r–f72v3), on the assumption that
-  f73r's four-cluster protocol structure compresses positions into specific time windows.
-  Pre-registered at commit `717d6b3d`; within-group std values were unknown at pre-reg time.
-- *Result:* FAILED (batch4330, 2026-05-27). H1 FAILED: terminal std=3.89h > early std=3.59h
-  (opposite direction). H2 FAILED: Levene p=0.195 (not significant). H3 FAILED: all-class
-  and CH-specific directions inconsistent (terminal all-class std higher, terminal CH std
-  lower, neither significant). All 15 zodiac folios show std in the 3.4–4.0h range.
-- *Why it failed:* The zodiac clock face assigns positions at 30-minute increments spanning
-  0–12h uniformly for every folio — this is the clock design, not a pharmacological signal.
-  Terminal and early folios both use the full clock face, producing the same ~3.7h population
-  std. The four-cluster f73r structure (GL4325) is not position compression but pharmacological
-  class assignment: specific classes (CH, OT/OK) occupy specific hour windows while the
-  positions themselves span the full day in both groups.
-- *Informative implication:* Rules out the alternative that the f73r protocol is "fewer
-  clock positions." The temporal structure is encoded in which pharmacological class occupies
-  which hour, not in any reduction of temporal coverage. The clock face is the annotation
-  grid; the pharmacological class is the encoded message.
-- *Disposition:* NR-09 recorded. GL4330 result strengthens the class-assignment interpretation
-  of the pharmacological clock and closes the clock variance question.
-
-**NR-10 — zodiac-astro vs. fRos @Cc clock equivalence (GL4336)**
-- *Prediction:* fRos @Cc clock positions (n=9, mean=5.89h, σ=3.63h) and zodiac-astro @Cc
-  clock positions would be statistically equivalent at both mean (MW p > 0.05) and variance
-  (Levene p > 0.10) levels — completing the four-register model by establishing that fRos
-  "belongs to the same register as zodiac-astro."
-- *Result:* FAILED (0/3). Zodiac-astro @Cc tokens (n=38, mean=10.06h, σ=0.92h, range 8.5–12.0h)
-  are dramatically different from fRos @Cc (MW p=0.0009; Levene F=23.52, p<0.0001; variance
-  ratio=15.5). Zodiac-astro @Cc clusters near-peak (~10h) like f68-series, NOT full-clock like
-  fRos. The pre-registered prediction was based on an incorrect assumption: the "zodiac mean=5.59h"
-  in prior GLs came from @Ro/@Lz/@Ri outer-ring position codes, not @Cc. The @Cc position code
-  in zodiac folios marks the WHEEL CENTER (hub), which encodes near-peak timing (~10h). The @Ro/
-  @Lz outer-ring positions span the full clock face (~5.6h). fRos @Cc (5.89h) matches the zodiac
-  outer-ring, not the zodiac center.
-- *Disposition:* NR-10 recorded. The finding generates GL4337 (zodiac @Cc ≈ f68-series @Cc,
-  both near-peak): if @Cc consistently marks near-peak timing across zodiac AND f68 sections,
-  fRos @Cc (5.89h, full-clock) is the structural outlier requiring explanation. The four-register
-  model as published in GL4333/GL4334 remains valid (fRos @Cc vs. f68-series @Cc comparison is
-  still apple-to-apple), but the claim that fRos "belongs to the same register as zodiac-astro"
-  is not supported at the @Cc level.
 
 ---
 

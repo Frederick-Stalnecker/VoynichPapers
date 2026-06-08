@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-06-01 13:33 UTC
+Generated: 2026-06-08 01:43 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.

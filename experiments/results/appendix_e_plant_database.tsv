@@ -1,0 +1,42 @@
+folio	first_token	phonemic	latin_name	mongolian	tibetan	score	formula	doctrinal_fit	cluster	confidence	batch_source
+f2v	kooiin	/ko-in/	Punica granatum	anar	se bru	0.750	WARM	YES	—	CONFIRMED	batch572
+f6r	foar	/fo-ar/	Acorus calamus	sholmag	shu dag	0.750	WARM	YES	—	CONFIRMED	batch572
+f3r	tsheos	/tshe-os/	Rheum sp.	gexiuna	lcum-rtsa	0.750	WARM	YES	—	CONFIRMED	batch572
+f17v	oldaig	/ol-daig/	Artemisia sieveriana	shugai	khrom rtsa	0.857	MIXED	YES	Artemisia	CONFIRMED	batch575
+f24v	tchodar	/tkodar/	Saussurea costus	kodar	rgya mtsho spos	0.833	TYPE-B	YES	Saussurea	CONFIRMED	batch599
+f7r	fchodaiin	/fkodain/	Coix lacryma-jobi	kodan	—	0.714	WARM	YES	Coix	PROBABLE	batch599
+f1r	fachys	/fakis/	Glycyrrhiza uralensis	dais	lcam pa	0.600	WARM	YES	Glycyrrhiza	PROBABLE	batch599
+f9v	fochor	/fokor/	Bupleurum sp.	fodar	smar leb	0.600	PLAIN-AMBIG	YES	—	PROBABLE	batch599
+f57v	dairal	/dairal/	Leontopodium sp.	maral	me tog dkar	0.667	PLAIN-AMBIG	YES	—	PROVISIONAL	batch599
+f2r	kydainy	/tsidaini/	Angelica dahurica	tsagaan	dwa ba	0.500	PLAIN-AMBIG	YES	—	PROBABLE	batch599
+f13r	torshor	/torshor/	Ranunculus sp.	tokhoi	—	0.571	PLAIN-AMBIG	YES	—	PROBABLE	batch599
+f17r	fshody	/fshodi/	Acorus calamus	shuti	shu dag	0.500	WARM	YES	Acorus	PROBABLE	batch599
+f32v	kcheodaiin	/tskeodain/	Coix lacryma-jobi	kodan	—	0.556	PLAIN-AMBIG	YES	Coix	PROBABLE	batch599
+f33r	tshdar	/tshdar/	Glycyrrhiza uralensis	yandar	lcam pa	0.500	PLAIN-AMBIG	YES	Glycyrrhiza	PROBABLE	batch599
+f31r	keedey	/tseedei/	Santalum album	tsanden	tsan dan	0.571	PLAIN-AMBIG	YES	—	PROBABLE	batch599
+f43r	tarodaiin	/tarodain/	Colocasia esculenta	taro	—	0.500	PLAIN-AMBIG	NO	—	PROBABLE	batch599
+f3v	—	—	Artemisia sp.	shugai	khrom rtsa	0.750	COLD	YES	Artemisia	CLUSTER-MEMBER	batch582
+f8v	—	—	Artemisia sp.	shugai	khrom rtsa	0.750	MIXED	YES	Artemisia	CLUSTER-MEMBER	batch582
+f21r	—	—	Artemisia sp.	shugai	khrom rtsa	0.700	PLAIN-AMBIG	YES	Artemisia	CLUSTER-MEMBER	batch603
+f26r	—	—	Artemisia sieveriana	shugai	khrom rtsa	0.750	WARM	YES	Artemisia	CLUSTER-MEMBER	batch602
+f30v	—	—	Artemisia sp.	shugai	khrom rtsa	0.700	WARM	YES	Artemisia	CLUSTER-MEMBER	batch603
+f32r	—	—	Artemisia sp.	shugai	khrom rtsa	0.700	WARM	YES	Artemisia	CLUSTER-MEMBER	batch603
+f52r	—	—	Artemisia sp.	shugai	khrom rtsa	0.700	COLD	YES	Artemisia	CLUSTER-MEMBER	batch603
+f16v	—	—	Ephedra sinica	aguur	mtshe	0.750	TYPE-B	YES	Ephedra	CLUSTER-MEMBER	batch587
+f26v	—	—	Ephedra sinica	aguur	mtshe	0.700	PLAIN-AMBIG	YES	Ephedra	CLUSTER-MEMBER	batch603
+f37v	—	—	Ephedra sinica	aguur	mtshe	0.700	WARM	YES	Ephedra	CLUSTER-MEMBER	batch603
+f39r	—	—	Ephedra sinica	aguur	mtshe	0.700	WARM	YES	Ephedra	CLUSTER-MEMBER	batch603
+f53v	—	—	Ephedra sinica	aguur	mtshe	0.700	WARM	YES	Ephedra	CLUSTER-MEMBER	batch603
+f13v	—	—	Amomum subulatum	tsamha	sug mel	0.750	TYPE-B	YES	Cardamom	CLUSTER-MEMBER	batch587
+f34r	—	—	Amomum subulatum	tsamha	sug mel	0.700	TYPE-B	YES	Cardamom	CLUSTER-MEMBER	batch593
+f40v	—	—	Amomum subulatum	tsamha	sug mel	0.700	TYPE-B	YES	Cardamom	CLUSTER-MEMBER	batch603
+f42r	—	—	Amomum subulatum	tsamha	sug mel	0.700	WARM	YES	Cardamom	CLUSTER-MEMBER	batch603
+f44v	—	—	Amomum subulatum	tsamha	sug mel	0.700	MIXED	YES	Cardamom	CLUSTER-MEMBER	batch603
+f29v	kooiin	/koin/	Punica granatum	aanar	se bru	0.750	PLAIN-AMBIG	YES	—	HIGH-PROBABLE	batch620
+f7v	polyshy	/polishi/	Syzygium aromaticum	li-shi	li shi	0.714	WARM	YES	—	HIGH-PROBABLE	batch620
+f41v	keerdal	/tseerrdal/	Swertia marginata	tsedendar	tig ta	0.667	TYPE-B	YES	—	HIGH-PROBABLE	batch620
+f33v	ydain	/idain/	Coix lacryma-jobi	kodain	—	0.667	TYPE-B	YES	Coix	HIGH-PROBABLE	batch620
+f38r	tolor	/tolor/	Rhodiola rosea	soloo	btsod	0.600	TYPE-B	YES	—	HIGH-PROBABLE	batch620
+f28r	pchodar	/p+chodar/	Saussurea costus	kodar	rgya mtsho spos	0.833	WARM	YES	Saussurea	CLUSTER-MEMBER	batch620
+f54v	pcheodar	/p+cheodar/	Saussurea costus	kodar	rgya mtsho spos	0.714	WARM	YES	Saussurea	CLUSTER-MEMBER	batch620
+f31v	podair	/p+odair/	Saussurea costus	kodar	rgya mtsho spos	0.667	PLAIN-AMBIG	YES	Saussurea	CLUSTER-MEMBER	batch620
