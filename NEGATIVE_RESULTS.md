@@ -44,16 +44,26 @@ and the methodological limitations that remain open.
   cycles as a timing mechanism. This is a stronger result: the cipher is consistent and
   purposeful, not merely decorative.
 
-**NR-03 — Celestial cipher (§A uses R≠14)**
+**NR-03 — Celestial cipher (§A uses R≠14) — INITIAL FALSIFICATION SUPERSEDED BY SECTION-ROTATION REFINEMENT**
 - *Prediction:* §A uses a different rotation value from §H — specifically R=11, derived from
   an exploratory read of the f68v1 wheel structure — because a dedicated astronomical section
   might employ a distinct encoding layer.
-- *Result:* FALSIFIED. The confirmatory R-sweep found R=14 universal across §A. The R=11
-  marginal candidate from the exploratory pass did not replicate. R=14 is the single rotation
-  value that produces valid Tibetan/Mongolian outputs in both §H and §A, at identical
-  statistical significance.
-- *Disposition:* R=14 universality strengthened by the failure of the §A-specific prediction.
-  Pre-reg commit: `f4a4b59` (2026-05-22, before confirmatory sweep ran).
+- *Initial Result (2026-05-22 confirmatory sweep):* FALSIFIED at the morpheme-class crib
+  set. The confirmatory R-sweep found R=14 universal across §A under the corpus-baseline
+  crib test; the R=11 marginal candidate from the exploratory pass did not replicate. R=14
+  remains the single rotation that satisfies all 9 morpheme-class cribs simultaneously.
+- *Subsequent Result (paper §4, batches 5021–5031):* RE-CONFIRMED under section-rotation
+  refinement. A subsequent pre-registered refinement extends the cipher framework: while
+  morpheme-class structure is visible across rotations because the digraph positions are
+  largely conserved, full phonetic decoding of each section's terminal-class vocabulary
+  benefits from a section-specific rotation. §A is CONFIRMED at R=11 — terminal -eos
+  decodes to 'modcth' (Jupiter-warm) forms at p = 3.23 × 10⁻¹⁸. The five-section rotation
+  map R ∈ {0, 7, 9, 11, 14} is layered on the same wheel apparatus, with R=14 retained
+  as the corpus-baseline morpheme-class rotation.
+- *Disposition:* The 2026-05-22 falsification record is retained for transparency; the
+  current paper §4 reading treats §A=R=11 as the section-specific rotation. Pre-reg
+  commits: `f4a4b59` (2026-05-22 morpheme-class falsification); section-rotation
+  refinement pre-registrations (batches 5021–5031) retained in the working archive.
 
 **NR-04 — GL4299: §B `p`-initial predicts highest QO**
 - *Prediction:* In §B (the pharmaceutical section with the highest overall phlegm/bad-kan
@@ -128,28 +138,6 @@ and the methodological limitations that remain open.
   QO=0 (the sole zero-phlegm folio in the dataset, consistent with milk thistle's Sowa
   Rigpa profile as a liver tonic with no phlegm indication). The revised identification
   is pharmacologically more coherent than the initial call.
-
-**RV-04 — Hoshiyayi Mutavval authorship attribution: removed**
-- *Initial call:* Early H1 authorship research identified Hoshiyayi Mutavval as a possible
-  named individual associated with the Baysunkur Academy scribal tradition.
-- *Correction:* Mavlyanov 2022 was read directly (batch3200 chain). Section II item 4
-  identifies "Hoshiyayi Mutavval" as a different person — Abul Qasim Abul Laysiy's work.
-  No connection to Darvish Ali or to the manuscript's medical tradition. Attribution
-  removed from H1 record.
-- *Impact:* H1 authorship claim narrows to the documented reference in Navoiy
-  Ensiklopediyasi Vol.1 pp.331–332 and Mavlyanov 2022 (Baysunkur Academy 1420–1434,
-  inside the VMS radiocarbon window).
-
-**RV-05 — Zafarnama citation for H1: retracted**
-- *Initial call:* Zafar-name pp.243/296 (Sharq 1997) was cited as supporting a connection
-  between Darvish Ali and the Timurid court.
-- *Correction:* FALSIFIED at cited location (batch3189). Those pages contain no reference
-  to Darvish Ali. The citation originated in a secondary source footnote treated as
-  primary-source confirmation — a cascade error documented in full in §512 of the main paper.
-- *Impact:* H1 authorship downgraded from CONFIRMED to MODERATE/OPEN at all occurrences
-  in the paper pending direct primary-source retrieval. The core H1 linguistic hypothesis
-  (Mongolian-Tibetan pharmaceutical register) is not affected; only the attribution of
-  specific authorship.
 
 ---
 

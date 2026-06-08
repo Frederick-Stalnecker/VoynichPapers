@@ -1,6 +1,6 @@
 # Voynich Manuscript Decipherment — Evidence Repository
 
-This repository contains the reproducible statistical evidence for the claim that the Voynich Manuscript (Beinecke MS 408, Yale University) encodes a pharmaceutical text in a hybrid Classical Mongolian / Tibetan Sowa Rigpa register, encrypted by a rotational substitution cipher calibrated at R=14.
+This repository contains the reproducible statistical evidence for the claim that the Voynich Manuscript (Beinecke MS 408, Yale University) encodes a pharmaceutical text in a hybrid Classical Mongolian / Tibetan Sowa Rigpa register, encrypted by an Alberti-type 17-position substitution wheel. The corpus baseline rotation R=14 is confirmed by 9 independent morpheme cribs (joint-coincidence probability ≈ 8.4 × 10⁻¹²); a subsequent pre-registered refinement (paper §4) identifies five section-specific rotations R ∈ {0, 7, 9, 11, 14} layered on the same wheel apparatus.
 
 Manuscript under review at *Cryptologia* (2026). arXiv preprint in preparation.
 
@@ -9,8 +9,8 @@ Manuscript under review at *Cryptologia* (2026). arXiv preprint in preparation.
 ## Reproduce in One Command
 
 ```bash
-git clone https://github.com/Frederick-Stalnecker/voynich-evidence.git
-cd voynich-evidence
+git clone https://github.com/Frederick-Stalnecker/VoynichPapers.git
+cd VoynichPapers
 ./reproduce.sh
 ```
 
@@ -167,7 +167,7 @@ This work is currently under review at *Cryptologia*. Until publication, please 
   title        = {Voynich Manuscript Decipherment --- Evidence Repository},
   year         = {2026},
   howpublished = {GitHub repository},
-  url          = {https://github.com/Frederick-Stalnecker/voynich-evidence},
+  url          = {https://github.com/Frederick-Stalnecker/VoynichPapers},
   note         = {Manuscript in review at Cryptologia (2026). Citation will be updated upon publication.}
 }
 ```

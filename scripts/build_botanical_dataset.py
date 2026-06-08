@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 One-time utility: parse §H botanical master summary → data/botanical_dataset.json
-Run from voynich-evidence root: python scripts/build_botanical_dataset.py
+Run from VoynichPapers root: python scripts/build_botanical_dataset.py
 """
 import json, re, sys
 from pathlib import Path

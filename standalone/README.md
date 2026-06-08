@@ -24,4 +24,4 @@ The test establishes that the manuscript's sections have genuinely distinct voca
 ---
 
 *Frederick Davis Stalnecker / THEOS Research Institute*
-*Repository: https://github.com/Frederick-Stalnecker/voynich-evidence*
+*Repository: https://github.com/Frederick-Stalnecker/VoynichPapers*

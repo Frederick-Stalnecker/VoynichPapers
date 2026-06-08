@@ -30,7 +30,7 @@ within folios) and makes no distributional assumptions whatsoever.
 Runtime: < 30 seconds (10,000 permutations). Python 3.8+ stdlib only.
 
 Author: Frederick Davis Stalnecker / THEOS Research Institute
-Repository: https://github.com/Frederick-Stalnecker/voynich-evidence
+Repository: https://github.com/Frederick-Stalnecker/VoynichPapers
 """
 
 import re
