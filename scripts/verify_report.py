@@ -162,7 +162,15 @@ def run():
         lines.append(f"| KW p-value (section architecture) | {arch.get('KW_p_value'):.0e} | ℹ️ manual verification |")
     lines.append("")
     if botanical and botanical.get("PASS"):
-        lines.append(f"*Botanical dataset loaded: {botanical.get('n_classified', '?')} folios. GL4313 confirmed by folio data: early={botanical.get('early_cold_pct','?')}% / late={botanical.get('late_cold_pct','?')}% cold.*\n")
+        lines.append(f"*Botanical dataset loaded: {botanical.get('n_in_dataset', botanical.get('n_classified', '?'))} folios in dataset; {botanical.get('n_classified', '?')} passing internal classification. GL4313 confirmed by folio data: early={botanical.get('early_cold_pct','?')}% / late={botanical.get('late_cold_pct','?')}% cold.*\n")
+        lines.append("> **Note on terminology:** `n_classified` reports the number of §H folios passing")
+        lines.append("> the pharmacological formula-type assignment test (paper §7 — dataset-level")
+        lines.append("> CONFIRMED + EXPLORATORY-STRONG status). This is **distinct** from the paper §6")
+        lines.append("> strict **CONFIRMED** plant-identification status (phoneme crib score ≥ 0.75")
+        lines.append("> *plus* independent *rGyud bzhi* doctrinal-fit PASS), which applies to only 5")
+        lines.append("> folios: f2v (pomegranate), f6r (*Acorus calamus*), f3r (*Rheum* sp.), f17v")
+        lines.append("> (*Artemisia sieversiana*), f24v (*Saussurea costus*). The two terms operate at")
+        lines.append("> different evidentiary thresholds on different analytical layers.\n")
     else:
         lines.append("*Note: Section architecture requires the full §H botanical dataset (scripts/4_botanical.py).*")
         lines.append("*Interim values are from paper Table 2.*\n")

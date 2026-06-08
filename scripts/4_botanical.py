@@ -87,13 +87,21 @@ def run():
     plants = data.get("plants", {})
     summary = data.get("summary", {})
 
-    n_classified = len(plants)
-    n_confirmed  = sum(1 for p in plants.values() if p.get("status") in ("CONFIRMED", "EXPLORATORY-STRONG"))
+    # n_in_dataset: total §H folios present in data/botanical_dataset.json.
+    n_in_dataset = len(plants)
+    # n_classified: dataset folios with internal status in {CONFIRMED, EXPLORATORY-STRONG}
+    # — i.e., folios passing the pharmacological formula-type assignment test (paper §7).
+    # NOTE: This is NOT the paper §6 "5 CONFIRMED" plant identifications. The paper's strict
+    # CONFIRMED status requires phoneme crib score >= 0.75 AND independent rGyud bzhi
+    # doctrinal-fit PASS (only 5 folios qualify: f2v, f6r, f3r, f17v, f24v). The field
+    # below counts the broader dataset-level formula-type pass, which is a different
+    # evidentiary layer at a different threshold.
+    n_classified = sum(1 for p in plants.values() if p.get("status") in ("CONFIRMED", "EXPLORATORY-STRONG"))
     n_cold       = sum(1 for p in plants.values() if p.get("CTH_pct", 1) == 0.0)
 
-    print(f"  Folios in dataset:  {n_classified}")
-    print(f"  Confirmed/Strong:   {n_confirmed}")
-    print(f"  Cold plants CTH=0:  {n_cold}")
+    print(f"  Folios in dataset:                                           {n_in_dataset}")
+    print(f"  Classification PASS (internal CONFIRMED+EXPLORATORY-STRONG): {n_classified}")
+    print(f"  Cold plants CTH=0:                                           {n_cold}")
 
     # Verify GL4313 thermal gradient: cold plants (CTH=0) concentrate in late quires
     # GL4313 claim: cold_pct early quires A-D = 6.6%; late quires E-H = 33.3%
@@ -136,10 +144,17 @@ def run():
     print(f"    f6v (haritaki):  {'✅ CONFIRMED' if plants.get('f6v',{}).get('status')=='CONFIRMED' else '❌'}")
     print(f"    f51v (bibhitaki): {'✅ CONFIRMED' if plants.get('f51v',{}).get('status')=='CONFIRMED' else '❌'}")
 
-    passes = n_classified >= 100 and triphala_ok and gradient_ok
+    passes = n_in_dataset >= 100 and triphala_ok and gradient_ok
     result = {
+        "_note_on_terminology": (
+            "n_classified counts §H folios passing internal pharmacological formula-type "
+            "assignment (CONFIRMED + EXPLORATORY-STRONG dataset status, paper §7). This is "
+            "DISTINCT from the paper §6 strict 'CONFIRMED' plant-identification status "
+            "(phoneme crib >= 0.75 + rGyud bzhi doctrinal-fit PASS; only 5 folios qualify: "
+            "f2v, f6r, f3r, f17v, f24v)."
+        ),
+        "n_in_dataset": n_in_dataset,
         "n_classified": n_classified,
-        "n_confirmed": n_confirmed,
         "n_cold_CTH0": n_cold,
         "triphala_confirmed": triphala_ok,
         "thermal_gradient_ok": gradient_ok,

@@ -1,6 +1,6 @@
 # Voynich Decipherment — Reproduction Report
 
-Generated: 2026-06-08 01:43 UTC
+Generated: 2026-06-08 02:10 UTC
 Corpus: ZL3b-n.txt (verify SHA-256 in CORPUS_HASH.txt)
 
 This report is generated automatically by `reproduce.sh`.
@@ -75,7 +75,16 @@ All reference values are read from `results/expected.json` (single source of tru
 | §B QO% highest (phlegm section) | 23.6% | ℹ️ manual verification — see paper §8 |
 | KW p-value (section architecture) | 4e-24 | ℹ️ manual verification |
 
-*Botanical dataset loaded: 109 folios. GL4313 confirmed by folio data: early=6.6% / late=33.3% cold.*
+*Botanical dataset loaded: 109 folios in dataset; 109 passing internal classification. GL4313 confirmed by folio data: early=6.6% / late=33.3% cold.*
+
+> **Note on terminology:** `n_classified` reports the number of §H folios passing
+> the pharmacological formula-type assignment test (paper §7 — dataset-level
+> CONFIRMED + EXPLORATORY-STRONG status). This is **distinct** from the paper §6
+> strict **CONFIRMED** plant-identification status (phoneme crib score ≥ 0.75
+> *plus* independent *rGyud bzhi* doctrinal-fit PASS), which applies to only 5
+> folios: f2v (pomegranate), f6r (*Acorus calamus*), f3r (*Rheum* sp.), f17v
+> (*Artemisia sieversiana*), f24v (*Saussurea costus*). The two terms operate at
+> different evidentiary thresholds on different analytical layers.
 
 ## 6. Triphala Botanical Identifications
 

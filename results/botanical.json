@@ -1,6 +1,7 @@
 {
+  "_note_on_terminology": "n_classified counts \u00a7H folios passing internal pharmacological formula-type assignment (CONFIRMED + EXPLORATORY-STRONG dataset status, paper \u00a77). This is DISTINCT from the paper \u00a76 strict 'CONFIRMED' plant-identification status (phoneme crib >= 0.75 + rGyud bzhi doctrinal-fit PASS; only 5 folios qualify: f2v, f6r, f3r, f17v, f24v).",
+  "n_in_dataset": 109,
   "n_classified": 109,
-  "n_confirmed": 109,
   "n_cold_CTH0": 20,
   "triphala_confirmed": true,
   "thermal_gradient_ok": true,
