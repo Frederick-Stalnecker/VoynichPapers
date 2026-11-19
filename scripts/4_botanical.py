@@ -8,7 +8,7 @@ CTH/CH/QO pharmacological profiles, pre-registration confirmations).
 This module requires data/botanical_dataset.json — the full 113-plant
 dataset with per-folio CTH/CH/QO scores, pre-registration commit hashes,
 and confirmation criteria. That dataset will be published alongside the
-Cryptologia paper.
+paper.
 
 Until the dataset is released, this module:
   1. Reports what the dataset must contain (format spec below)
@@ -63,7 +63,7 @@ def run():
     if not DATA_PATH.exists():
         print(f"\n  ⚠️  data/botanical_dataset.json not found.")
         print(f"  This module requires the full 113-plant dataset.")
-        print(f"  The dataset will be published with the Cryptologia paper.")
+        print(f"  The dataset will be published with the paper.")
         print(f"\n  Expected dataset format is documented in this script's")
         print(f"  module docstring — see scripts/4_botanical.py lines 14–46.")
         print(f"\n  Reference values (from paper Table 2):")
@@ -78,7 +78,7 @@ def run():
         print(f"\n  To run this module: place botanical_dataset.json in data/")
         print(f"  and re-run ./reproduce.sh or python scripts/4_botanical.py")
         result = {"PASS": None, "status": "DATASET_PENDING",
-                  "note": "Full dataset to be published with Cryptologia paper"}
+                  "note": "Full dataset to be published with the paper"}
         RESULTS_PATH.write_text(json.dumps(result, indent=2))
         return result
 

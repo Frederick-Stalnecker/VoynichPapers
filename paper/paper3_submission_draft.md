@@ -3,7 +3,7 @@
 **Frederick Davis Stalnecker**
 THEOS Research Institute
 
-*Preprint — submitted to Cryptologia*
+*Preprint*
 
 ---
 

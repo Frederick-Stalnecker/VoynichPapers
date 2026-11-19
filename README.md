@@ -2,7 +2,7 @@
 
 This repository contains the reproducible statistical evidence for the claim that the Voynich Manuscript (Beinecke MS 408, Yale University) encodes a pharmaceutical text in a hybrid Classical Mongolian / Tibetan Sowa Rigpa register, encrypted by an Alberti-type 17-position substitution wheel. The corpus baseline rotation R=14 is confirmed by 9 independent morpheme cribs (joint-coincidence probability ≈ 8.4 × 10⁻¹²); a subsequent pre-registered refinement (paper §4) identifies five section-specific rotations R ∈ {0, 7, 9, 11, 14} layered on the same wheel apparatus.
 
-Manuscript under review at *Cryptologia* (2026). arXiv preprint in preparation.
+Preprint (2026).
 
 ---
 
@@ -159,7 +159,7 @@ The reproduction scripts in this repository were formatted and structured with t
 
 ## Citation
 
-This work is currently under review at *Cryptologia*. Until publication, please cite as:
+Please cite as:
 
 ```bibtex
 @misc{stalnecker2026voynich,
@@ -168,7 +168,7 @@ This work is currently under review at *Cryptologia*. Until publication, please 
   year         = {2026},
   howpublished = {GitHub repository},
   url          = {https://github.com/Frederick-Stalnecker/VoynichPapers},
-  note         = {Manuscript in review at Cryptologia (2026). Citation will be updated upon publication.}
+  note         = {Preprint, 2026}
 }
 ```
 

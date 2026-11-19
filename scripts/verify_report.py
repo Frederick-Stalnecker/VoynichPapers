@@ -238,7 +238,7 @@ def run():
     lines.append("```")
     lines.append("Results in `results/grammar_laws.json` include per-law ratios and section-level detail.\n")
     lines.append("**Contact for technical review:** frederick.stalnecker@theosresearch.org")
-    lines.append("*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/VoynichPapers. Manuscript in review at Cryptologia (2026).*\n")
+    lines.append("*Please cite: Stalnecker, F.D. (2026). Voynich Manuscript Decipherment — Evidence Repository. GitHub. https://github.com/Frederick-Stalnecker/VoynichPapers. Preprint (2026).*\n")
 
     # Summary — 6 modules: cipher, syllabary, vocabulary, gradient, botanical, grammar
     bot_pass = botanical.get("PASS", False) if botanical and botanical.get("PASS") is not None else None

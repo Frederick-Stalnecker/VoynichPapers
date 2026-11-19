@@ -16,7 +16,6 @@ authors:
 repository-code: "https://github.com/Frederick-Stalnecker/VoynichPapers"
 keywords:
   - Voynich Manuscript
-  - Cryptologia
   - Sowa Rigpa
   - Tibetan medicine
   - cipher
@@ -27,14 +26,13 @@ license: CC-BY-4.0
 version: "1.0.0"
 date-released: "2026-05-26"
 references:
-  - type: article
+  - type: generic
     authors:
       - family-names: Stalnecker
         given-names: Frederick Davis
     title: "Voynich Manuscript Decipherment: Statistical Evidence for a Mongolian-Tibetan Pharmaceutical Register Encrypted at Rotation R=14"
-    journal: Cryptologia
     year: 2026
-    notes: "Manuscript in review at Cryptologia (2026). Title and volume/page details will be updated upon publication."
+    notes: "Preprint (2026)."
   - type: dataset
     authors:
       - family-names: Zandbergen
