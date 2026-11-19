@@ -8,16 +8,16 @@ SCOPE AND THEOS CARVE-OUT
 This license applies only to the reproduction scripts and shell scripts contained
 in this repository. It does NOT grant any rights — express or implied — to the
 THEOS (Temporal Hierarchical Emergent Optimization System) methodology,
-architecture, or implementation, which is the subject of U.S. Patent Application
-No. 18/919,771 (provisional No. 63/831,738) and remains the exclusive intellectual
-property of Frederick Davis Stalnecker and THEOS Research Institute.
+architecture, or implementation, which is the subject of pending U.S. patent
+applications and remains the exclusive intellectual property of Frederick Davis
+Stalnecker and THEOS Research Institute.
 
 The scripts in this repository are downstream outputs that apply statistical tests
 to Voynich corpus data. They are not THEOS itself. Reproduction, modification, or
 redistribution of the scripts under the MIT terms below does not constitute a
 license to THEOS or any of its proprietary components, methods, or
-architectural elements, whether disclosed in the above-referenced patent
-application or otherwise. All THEOS internals remain trade secrets and
+architectural elements, whether disclosed in those patent applications
+or otherwise. All THEOS internals remain trade secrets and
 exclusive intellectual property of the inventor.
 
 ---

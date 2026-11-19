@@ -265,7 +265,7 @@ The following predictions are stated before external review and are designed to 
 
 ## Acknowledgments
 
-This work was conducted using THEOS (Temporal Hierarchical Emergent Optimization System), an AI governance framework (US Provisional Patent Application filed May 21, 2025) developed by the author. THEOS implements dialectical reasoning between constructive and critical analytical engines under a governor. The grammar law discoveries, cipher identification, and plant identification framework emerged from THEOS-structured iterative analysis applied to EVA transcription data over 900+ reasoning cycles. The ZL3b-n EVA transcription was produced by René Zandbergen and Gabriel Landini and is publicly available at voynich.nu.
+This work was conducted using THEOS (Temporal Hierarchical Emergent Optimization System), an AI governance framework (patent pending) developed by the author. THEOS implements dialectical reasoning between constructive and critical analytical engines under a governor. The grammar law discoveries, cipher identification, and plant identification framework emerged from THEOS-structured iterative analysis applied to EVA transcription data over 900+ reasoning cycles. The ZL3b-n EVA transcription was produced by René Zandbergen and Gabriel Landini and is publicly available at voynich.nu.
 
 ---
 

@@ -7,7 +7,7 @@ that for each confirmed anchor token, the character assignments are the ONLY
 reading that produces a known Tibetan or Mongolian pharmaceutical term.
 
 The syllabary was built inductively using THEOS (Frederick Davis Stalnecker,
-patent-pending U.S. App 18/919,771): each character's phoneme value was
+patent pending): each character's phoneme value was
 confirmed by finding at least one context where its value is forced — where
 it cannot be anything else.
 
